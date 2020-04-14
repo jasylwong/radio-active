@@ -37,3 +37,7 @@ band_pass_filter([35,36, 55], 30, 50) -> [35, 36, 50]
 https://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html 
 https://www.youtube.com/watch?v=B93QezwTQpI 
 https://kata-log.rocks/tdd 
+
+Feedback: https://docs.google.com/feeds/download/documents/export/Export?id=1pVgW-wO5ZvtQ_Nax39SPcK3zWBSvcuksofWMLWrFfgU&exportFormat=pdf
+
+Screen recording: https://www.youtube.com/watch?v=MWi1OaEnx8A

@@ -24,22 +24,22 @@ describe('band_pass_filter', () => {
   })
 
   describe('two sounds', () => {
-    describe('two sounds within range' , () => {
-      test('two sounds within range', () => {
-        expect(band_pass_filter([41, 42], 40, 45)).toEqual([41, 42]);
-      })
+    test('two sounds within range' , () => {
+      expect(band_pass_filter([41, 42], 40, 45)).toEqual([41, 42]);
     })
 
-    describe('two sounds: one within range, one above' , () => {
-      test('two sounds within range', () => {
-        expect(band_pass_filter([41, 60], 40, 45)).toEqual([41, 45]);
-      })
+    test('two sounds: one within range, one above' , () => {
+      expect(band_pass_filter([41, 60], 40, 45)).toEqual([41, 45]);
     })
 
-    describe('two sounds: both outside range' , () => {
-      test('two sounds within range', () => {
-        expect(band_pass_filter([5, 46], 40, 45)).toEqual([40, 45]);
-      })
+    test('two sounds: both outside range' , () => {
+      expect(band_pass_filter([5, 46], 40, 45)).toEqual([40, 45]);
+    })
+  })
+
+  describe('two sounds: both outside range' , () => {
+    test('two sounds within range', () => {
+      expect(band_pass_filter([5, 46], 40, 45)).toEqual([40, 45]);
     })
   })
 })

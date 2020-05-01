@@ -37,9 +37,9 @@ describe('band_pass_filter', () => {
     })
   })
 
-  describe('two sounds: both outside range' , () => {
-    test('two sounds within range', () => {
-      expect(band_pass_filter([5, 46], 40, 45)).toEqual([40, 45]);
+  describe('three sounds' , () => {
+    test('three sounds', () => {
+      expect(band_pass_filter([35, 1, 37], 34, 36)).toEqual([35, 34, 36]);
     })
   })
 })

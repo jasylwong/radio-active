@@ -31,7 +31,5 @@ jobs:
       run: |
         npm run build --if-present
     - name: Deploy
-      uses: jasylwong/github-pages-deploy-action@releases/v3
-      with:
-        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_dir: ./public
+      run: |
+        npm run deploy

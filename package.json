@@ -16,8 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "git remote set-url origin https://${REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/jasylwong/radio-active.git && gh-pages -d build",
-    ""
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

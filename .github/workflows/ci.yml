@@ -30,6 +30,9 @@ jobs:
     - name: npm build
       run: |
         npm run build --if-present
-    - name: Deploy
+    - name: Deploy to GH Pages
       run: |
+        git config --global user.email "jasylwong@gmail.com"
+        git config --global user.name "jasylwong"
+        git remote set-url origin https://${GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/jasylwong/radio-active.git
         npm run deploy

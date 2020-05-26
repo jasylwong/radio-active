@@ -34,5 +34,5 @@ jobs:
       run: |
         git config --global user.email "jasylwong@gmail.com"
         git config --global user.name "jasylwong"
-        git remote set-url origin https://${REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/jasylwong/radio-active.git
+        git remote set-url origin https://df1a261dc956b8237ee4c482d6d30e50e8b0c45d@github.com/jasylwong/radio-active.git
         npm run deploy

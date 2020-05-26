@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 10.x, 8.x]
+        node-version: [12.x]
     
     steps:
     - uses: actions/checkout@v1
@@ -34,4 +34,5 @@ jobs:
       run: |
         git config --global user.email "jasylwong@gmail.com"
         git config --global user.name "jasylwong"
+        git remote set-url origin https://$GITHUB_PERSONAL_ACCESS_TOKEN>@github.com/jasylwong/radio-active>.git
         npm run deploy

@@ -30,9 +30,8 @@ jobs:
     - name: npm build
       run: |
         npm run build --if-present
-    - name: Deploy to GH Pages
-      run: |
-        git config --global user.email "jasylwong@gmail.com"
-        git config --global user.name "jasylwong"
-        git remote set-url origin https://df1a261dc956b8237ee4c482d6d30e50e8b0c45d@github.com/jasylwong/radio-active.git
-        npm run deploy
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./build

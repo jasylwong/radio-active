@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Deploy only on PR this time
+      Added types for PR, and only on merges
       <a
         className="App-link"
         href="https://reactjs.org"

@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Hello world again!!
+          Deploy only for master?
         </p>
         <a
           className="App-link"

@@ -12,21 +12,30 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
     - name: npm install
       run: |
         npm install
+
     - name: npm test
       run: |
         npm test 
       env:
         CI: true
+
     - name: npm build
       run: |
         npm run build --if-present
+
+    - name: linter
+      run: |
+        eslint .
+        
     - name: Deploy to gh-pages
       if: github.ref == 'refs/head/master'
       uses: peaceiris/actions-gh-pages@v3

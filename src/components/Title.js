@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Title () {
+function Title({ content }) {
   return (
     <div id="title">
-      Radio-Active
+      {content}
     </div>
   );
-};
+}
 
 export default Title;

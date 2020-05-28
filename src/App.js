@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Title from './components/Title.js';
+import Title from './components/Title';
 
 function App() {
   return (
     <div className="App">
-      <Title />
+      <Title content="Radio-Active" />
       Added types for PR, and only on merges
       <a
         className="App-link"

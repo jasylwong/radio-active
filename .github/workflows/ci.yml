@@ -4,6 +4,9 @@ on:
   push:
     branches-ignore:
       - master
+  pulll-request:
+    types:
+      - closed
 
 jobs:
   build:

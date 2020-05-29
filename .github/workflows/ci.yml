@@ -4,7 +4,7 @@ on:
   push:
     branches-ignore:
       - master
-  pulll-request:
+  pull-request:
     types:
       - closed
 

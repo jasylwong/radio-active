@@ -6,15 +6,7 @@ function App() {
   return (
     <div className="App">
       <Title content="Radio-Active" />
-      Added types for PR, and only on merges
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+      <audio controls id="audio" src="https://ais.absoluteradio.co.uk/absoluteclassicrock.mp3?direct=true" />
     </div>
   );
 }

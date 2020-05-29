@@ -10,4 +10,9 @@ describe('App', () => {
     const component = mount(<App />);
     expect(component).toMatchSnapshot();
   });
+
+  it('renders the audio element', () => {
+    const component = mount(<App />);
+    expect(component.find('#audio').type()).toEqual('audio');
+  });
 });

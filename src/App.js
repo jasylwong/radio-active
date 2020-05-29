@@ -1,18 +1,12 @@
 import React from 'react';
 import './App.css';
+import Title from './components/Title';
 
 function App() {
   return (
     <div className="App">
-      Added types for PR, and only on merges
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+      <Title content="Radio-Active" />
+      <audio controls id="audio" src="https://ais.absoluteradio.co.uk/absoluteclassicrock.mp3?direct=true" />
     </div>
   );
 }

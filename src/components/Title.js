@@ -2,9 +2,9 @@ import React from 'react';
 
 function Title({ content }) {
   return (
-    <div id="title">
+    <h1 id="title">
       {content}
-    </div>
+    </h1>
   );
 }
 

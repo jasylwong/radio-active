@@ -7,7 +7,6 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [stations, setStations] = useState(null);
   const [station, setStation] = useState('');
-  const [stationNP, setStationNP] = useState('');
   const [stationCounter, setStationCounter] = useState(0);
 
   useEffect(() => {
@@ -15,7 +14,6 @@ function App() {
       .then((res) => {
         setStations(res.data.stationBrandRelated);
         setStation(res.data.stationBrandRelated[0]);
-        setStationNP(res.data.stationBrandRelated[0].stationNowPlaying);
       });
   }, []);
 
@@ -23,6 +21,17 @@ function App() {
     const audio = document.getElementById('audio');
     setIsPlaying(!isPlaying);
     return isPlaying ? audio.pause() : audio.play();
+  };
+
+  const handleBackward = () => {
+    if (stationCounter === 0) {
+      setStationCounter(stations.length - 1);
+      setStation(stations[stations.length - 1]);
+    } else {
+      setStationCounter(stationCounter - 1);
+      setStation(stations[stationCounter - 1]);
+    }
+    setIsPlaying(false);
   };
 
   const handleForward = () => {
@@ -33,23 +42,31 @@ function App() {
       setStationCounter(stationCounter + 1);
       setStation(stations[stationCounter + 1]);
     }
-    setStationNP(stations[0].stationNowPlaying);
+    setIsPlaying(false);
   };
 
   return (
     <div className="App">
+      <br />
+      <br />
       <Title content="Radio-Active" />
       <br />
-      <div>{`Station: ${station.stationName}`}</div>
-      <br />
-      <img src={stationNP.nowPlayingImage} alt={station.Name} />
+      <img src={station.stationLockScreenImage} alt={station.Name} height="250vh" />
       <audio id="audio" src={station.stationMP3Stream} paused="true" />
       <br />
       <br />
-      <p>{`Current track: ${stationNP.nowPlayingTrack} by ${stationNP.nowPlayingArtist}`}</p>
       <br />
-      <button id="player" onClick={() => handleClick()} type="button">{isPlaying ? 'Pause' : 'Play'}</button>
-      <button onClick={() => handleForward()} type="button">Forward</button>
+      <button onClick={() => handleBackward()} type="button" className="button small-button">
+        <i className="fa fa-step-backward fa-2x" />
+      </button>
+      <button id="player" onClick={() => handleClick()} type="button" className="button">
+        {
+          isPlaying ? <i className="fa fa-pause-circle fa-4x" /> : <i className="fa fa-play-circle fa-4x" />
+        }
+      </button>
+      <button onClick={() => handleForward()} type="button" className="button small-button">
+        <i className="fa fa-step-forward fa-2x" />
+      </button>
     </div>
   );
 }

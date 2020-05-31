@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,KACE,iBACF,CAEA,QACE,WACF,CAEA,cACE,2BACF","file":"main.9fd70a99.chunk.css","sourcesContent":[".App {\n  text-align: center;\n}\n\n.button {\n  margin: 10px;\n}\n\n.small-button {\n  transform: translateY(-10px);\n}"]}

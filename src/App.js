@@ -32,6 +32,7 @@ function App() {
       setStation(stations[stationCounter - 1]);
     }
     setIsPlaying(false);
+    document.getElementById('audio').pause();
   };
 
   const handleForward = () => {
@@ -43,6 +44,7 @@ function App() {
       setStation(stations[stationCounter + 1]);
     }
     setIsPlaying(false);
+    document.getElementById('audio').pause();
   };
 
   return (
@@ -52,7 +54,7 @@ function App() {
       <Title content="Radio-Active" />
       <br />
       <img src={station.stationLockScreenImage} alt={station.Name} height="250vh" />
-      <audio id="audio" src={station.stationMP3Stream} paused="true" />
+      <audio id="audio" src={station.stationAACStream} paused="true" />
       <br />
       <br />
       <br />

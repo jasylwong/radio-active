@@ -2,10 +2,20 @@
 
 Live link [here](https://jasylwong.github.io/radio-active/).
 
-[Objective](#Objective) | [Running the program](#running_the_program)
+[Objective](#Objective) | [Technologies used](#tech) | [Running the program](#running_the_program) | [Further work](#further_work)
 
 ## Objective
 
+
+## <a name="tech">Technologies used</a>
+
+- Frontend: React
+- API: Absolute Radio
+- Linter: ESLint
+- Test framework: Jest and Enzyme
+- Styling frameworks: Water.css
+- CI/CD: GitHub Actions
+- Deployment: GitHub Pages
 
 ## <a name="running_the_program">Running the program</a>
 

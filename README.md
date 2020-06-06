@@ -1,21 +1,26 @@
-# Radio-Active 📻
+# Radio-Active 📻 ☢️
 
-Live link [here](https://jasylwong.github.io/radio-active/).
+Live link [here](https://jasylwong.github.io/radio-active/)!
 
 [Objective](#Objective) | [Technologies used](#tech) | [Running the program](#running_the_program) | [Further work](#further_work)
 
-## Objective
+## <a name="Objective">Objective</a>
 
+I love music. I love tech. I combined the two.
+A React app which plays some radio stations I like.
+
+This app uses GitHub Actions and Pages for CI/CD, and only on valid new branch pull requests.
+
+Added bonus: no messages asking for cookie consent, and autoplay enabled. Therefore you can start listening to music instantly just by going to the website.
 
 ## <a name="tech">Technologies used</a>
 
 - Frontend: React
 - API: Absolute Radio
+- CI & CD: GitHub Actions & GitHub Pages
 - Linter: ESLint
-- Test framework: Jest and Enzyme
 - Styling frameworks: Water.css
-- CI/CD: GitHub Actions
-- Deployment: GitHub Pages
+- Test framework: Jest and Enzyme
 
 ## <a name="running_the_program">Running the program</a>
 
@@ -24,6 +29,7 @@ Live link [here](https://jasylwong.github.io/radio-active/).
 $ git clone https://github.com/jasylwong/radio-active.git
 $ cd radio-active
 $ npm i
+$ npm start
 ```
 
 ### Testing and code style

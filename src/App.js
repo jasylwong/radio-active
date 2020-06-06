@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Title from './components/Title';
+import RadioStation from './components/RadioStation';
+import Control from './components/Control';
 import './App.css';
 
 function App() {
@@ -53,22 +55,16 @@ function App() {
       <br />
       <Title content="Radio-Active" />
       <br />
-      <img src={station.stationLockScreenImage} alt={station.Name} height="250vh" />
-      <audio id="audio" src={station.stationAACStream} paused="true" />
+      <RadioStation station={station} />
       <br />
       <br />
       <br />
-      <button onClick={() => handleBackward()} type="button" className="button small-button">
-        <i className="fa fa-step-backward fa-2x" />
-      </button>
-      <button id="player" onClick={() => handleClick()} type="button" className="button">
-        {
-          isPlaying ? <i className="fa fa-pause-circle fa-4x" /> : <i className="fa fa-play-circle fa-4x" />
-        }
-      </button>
-      <button onClick={() => handleForward()} type="button" className="button small-button">
-        <i className="fa fa-step-forward fa-2x" />
-      </button>
+      <Control
+        handleBackward={handleBackward}
+        handleClick={handleClick}
+        handleForward={handleForward}
+        isPlaying={isPlaying}
+      />
     </div>
   );
 }

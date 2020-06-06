@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/jasylwong/radio-active/workflows/CI/badge.svg)](https://github.com/jasylwong/radio-active/actions) 
+
 # Radio-Active 📻 ☢️
 
 Live link [here](https://jasylwong.github.io/radio-active/)!

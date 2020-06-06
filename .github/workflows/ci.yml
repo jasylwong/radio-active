@@ -1,12 +1,6 @@
 name: CI
 
-on:
-  push:
-    branches-ignore:
-      - master
-  pull_request:
-    types:
-      - closed
+on: push
 
 jobs:
   build:

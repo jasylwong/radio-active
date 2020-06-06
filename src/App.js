@@ -6,7 +6,7 @@ import Control from './components/Control';
 import './App.css';
 
 function App() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [stations, setStations] = useState(null);
   const [station, setStation] = useState('');
   const [stationCounter, setStationCounter] = useState(0);
@@ -33,8 +33,6 @@ function App() {
       setStationCounter(stationCounter - 1);
       setStation(stations[stationCounter - 1]);
     }
-    setIsPlaying(false);
-    document.getElementById('audio').pause();
   };
 
   const handleForward = () => {
@@ -45,8 +43,6 @@ function App() {
       setStationCounter(stationCounter + 1);
       setStation(stations[stationCounter + 1]);
     }
-    setIsPlaying(false);
-    document.getElementById('audio').pause();
   };
 
   return (

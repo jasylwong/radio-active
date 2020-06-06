@@ -1,6 +1,12 @@
 name: CI
 
-on: push
+on:
+  push:
+    branches-ignore:
+      - master
+  pull_request:
+    types:
+      - closed
 
 jobs:
   build:
@@ -37,6 +43,7 @@ jobs:
         npm run lint
   
     - name: Deploy to gh-pages
+      if: github.event.pull_request.merged == true
       uses: peaceiris/actions-gh-pages@v3
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}

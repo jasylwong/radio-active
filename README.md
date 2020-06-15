@@ -6,6 +6,8 @@ Live link [here](https://jasylwong.github.io/radio-active/)!
 
 [Objective](#Objective) | [Technologies used](#tech) | [Running the program](#running_the_program) | [Further work](#further_work)
 
+![radio-active](radio_active_phone.png)
+
 ## <a name="Objective">Objective</a>
 
 I love music. I love tech. I combined the two.

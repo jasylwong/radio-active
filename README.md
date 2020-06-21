@@ -15,7 +15,8 @@ A React app which plays some radio stations I like.
 
 This app uses GitHub Actions and Pages for CI/CD, and only on valid new branch pull requests.
 
-Added bonus: no messages asking for cookie consent, and autoplay enabled. Therefore you can start listening to music instantly just by going to the website.
+Added bonus: no messages asking for cookie consent, and autoplay auto enabled. Therefore you can start listening to music instantly just by going to my website, as opposed to the official website where it takes multiple clicks and some time before you can start streaming the radio.
+
 
 ## <a name="tech">Technologies used</a>
 
